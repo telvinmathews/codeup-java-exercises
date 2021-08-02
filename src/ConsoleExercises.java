@@ -3,8 +3,8 @@ public class ConsoleExercises {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-//        double pi = 3.14159;
-//        System.out.format("The value of pi is approximately %s", pi);
+        double pi = 3.14159;
+        System.out.format("The value of pi is approximately %.2f", pi);
 //        System.out.println("enter a integer: ");
 //        int userNumber = scanner.nextInt();
 //        System.out.format("Your number is %s",userNumber);
@@ -20,12 +20,13 @@ public class ConsoleExercises {
 //        System.out.println("enter a sentence: ");
 //        String userSentence = scanner.nextLine();
 //        System.out.printf("You entered %s", userSentence);
-
-        System.out.println("enter values of length and width of a classroom at Codeup: ");
+//
+        System.out.println("enter values of length of a classroom at Codeup: ");
         String userLength = scanner.nextLine();
+        System.out.println("enter values of width of a classroom at Codeup: ");
         String userWidth = scanner.nextLine();
-        int userL = Integer.parseInt(userLength);
-        int userW = Integer.parseInt(userWidth);
+        double userL = Double.parseDouble(userLength);
+        double userW = Double.parseDouble(userWidth);
         System.out.print("Area: ");
         System.out.println(userL * userW);
         System.out.print("Perimeter: ");
