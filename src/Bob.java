@@ -24,8 +24,5 @@ public class Bob {
                 System.out.println("Text to talk to Bob: ");
             }
         } while (toContinue);
-
-
-
     }
 }
