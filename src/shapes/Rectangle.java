@@ -12,7 +12,7 @@ public class Rectangle {
     }
 
     protected int getArea () {
-        return length * length;
+        return length * width;
     }
 
     protected int getPerimeter() {
