@@ -15,11 +15,12 @@ public class Circle {
 
     //member methods
 
-
     public double getArea() {
         double area = radius * radius * Math.PI;
         return area;
     }
+
+
     public double getCircumference() {
         double circumference= Math.PI * 2*radius;
         return circumference;
