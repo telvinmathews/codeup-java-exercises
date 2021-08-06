@@ -6,24 +6,23 @@ public class Input {
     //member variables
 //    private Scanner scanner;
     private String userString;
-    private Scanner scanner = new Scanner(System.in);
-//    private Scanner scanner;
+    private Scanner scanner;
 
 
     //constructor
-//    public Input() {
-//        this.scanner = new Scanner(System.in);
-//    }
+    public Input() {
+        this.scanner = new Scanner(System.in);
+    }
 
 
     //member methods
 
-    String getString() {
+    public String getString() {
         System.out.println("Please type a some words: ");
         return this.userString = scanner.next();
     }
 
-    boolean yesNo() {
+    public boolean yesNo() {
         System.out.println("Make a choice: (y|n)");
         String userChoice = scanner.next();
         if (!userChoice.equalsIgnoreCase("y")) {
@@ -32,13 +31,13 @@ public class Input {
         return true;
     }
 
-    int getInt() {
+    public int getInt() {
         System.out.println("Pick a number: ");
         int userNumber = scanner.nextInt();
         return userNumber;
     }
 
-    int getInt(int min, int max) {
+    public int getInt(int min, int max) {
         System.out.println("Pick a number: ");
         int userNumber = scanner.nextInt();
         if (userNumber > max || userNumber < min) {
@@ -47,18 +46,20 @@ public class Input {
         return userNumber;
     }
 
-    double getDouble() {
+    public double getDouble() {
         System.out.println("Pick a number: ");
         double userNumber = scanner.nextDouble();
         return userNumber;
     }
 
-    double getDouble(double min, double max) {
+    public double getDouble(double min, double max) {
         System.out.println("Pick a number: ");
         double userNumber = scanner.nextDouble();
         if (userNumber > max || userNumber < min) {
+            System.out.println("Try again! ");
             return getDouble(min, max);
         }
+        System.out.println("That's a valid number!");
         return userNumber;
     }
 
