@@ -41,8 +41,10 @@ public class Input {
         System.out.println("Pick a number: ");
         int userNumber = scanner.nextInt();
         if (userNumber > max || userNumber < min) {
+            System.out.println("Try again! ");
             return getInt(min, max);
         }
+        System.out.println("That's a valid number!");
         return userNumber;
     }
 
