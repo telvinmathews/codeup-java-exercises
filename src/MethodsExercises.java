@@ -79,5 +79,8 @@ public class MethodsExercises {
 //        System.out.println("Should return 0: " +  modulus(5,5));
 //        calculateFactorial();
 //        diceGame();
+        int x = 5 * 4 % 3;
+        System.out.println(x);
+
     }
 }
