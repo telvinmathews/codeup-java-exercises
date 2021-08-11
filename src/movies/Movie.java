@@ -21,9 +21,7 @@ public class Movie {
         return category;
     }
 
-    public Movies[] viewMovieByGenre (String genre) {
-        return
-    }
+
     public void setCategory(String category) {
         this.category = category;
     }
