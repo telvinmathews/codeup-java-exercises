@@ -7,21 +7,21 @@ public class Student {
     private String studentName;
     private ArrayList<Integer> grades;
 
-    public Student(String studentName, ArrayList<Integer> grades) {
+    public Student(String studentName) {
         this.studentName = studentName;
-        this.grades = grades;
+        this.grades = new ArrayList<>();
     }
 
     //     member methods
 
 // returns the student's name
     public String getName() {
-        return studentName;
+        return this.studentName;
     }
 
     // adds the given grade to the grades property
     public void addGrade(int grade) {
-        grades.add(grade);
+        this.grades.add(grade);
     };
 
     // returns the average of the students grades
@@ -34,22 +34,19 @@ public class Student {
         return Math.round(average);
     }
 
-    public static void main(String[] args) {
-        ArrayList<Integer> timsGrades = new ArrayList<>();
-        timsGrades.add(80);    // adding an element
-        timsGrades.add(90); // specifying an index
-        timsGrades.add(20);
-
-        Student firstStudent = new Student("Tim", timsGrades);
-        System.out.println(firstStudent.studentName + "'s " + "Grades: " + firstStudent.grades);
-        System.out.println(firstStudent.studentName + "'s " + "Average: " + firstStudent.getGradeAverage());
-        System.out.println("Tim's' new grades:");
-        firstStudent.addGrade(50);
-        System.out.println(firstStudent.grades);
-        System.out.println(firstStudent.studentName + "'s " + "New Average: " + firstStudent.getGradeAverage());
-
-
-
-    }
+//    public static void main(String[] args) {
+//        ArrayList<Integer> timsGrades = new ArrayList<>();
+//        timsGrades.add(80);    // adding an element
+//        timsGrades.add(90); // specifying an index
+//        timsGrades.add(20);
+//
+//        Student firstStudent = new Student("Tim", timsGrades);
+//        System.out.println(firstStudent.studentName + "'s " + "Grades: " + firstStudent.grades);
+//        System.out.println(firstStudent.studentName + "'s " + "Average: " + firstStudent.getGradeAverage());
+//        System.out.println("Tim's' new grades:");
+//        firstStudent.addGrade(50);
+//        System.out.println(firstStudent.grades);
+//        System.out.println(firstStudent.studentName + "'s " + "New Average: " + firstStudent.getGradeAverage());
+//    }
 
 }
