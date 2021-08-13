@@ -32,25 +32,30 @@ public class Input {
     }
 
     public int getInt() {
-        System.out.println("Pick a number: ");
-        int userNumber = scanner.nextInt();
+//        System.out.println("Pick a number: ");
+        int userNumber = Integer.valueOf(getString()) ;
         return userNumber;
     }
 
     public int getInt(int min, int max) {
         System.out.println("Pick a number: ");
-        int userNumber = scanner.nextInt();
-        if (userNumber > max || userNumber < min) {
-            System.out.println("Try again! ");
-            return getInt(min, max);
+        int userNumber;
+        try {
+            userNumber = Integer.valueOf(getString()) ;
+        } catch (Exception e) {
+            throw new NumberFormatException();
         }
-        System.out.println("That's a valid number!");
         return userNumber;
     }
 
     public double getDouble() {
         System.out.println("Pick a number: ");
-        double userNumber = scanner.nextDouble();
+        double userNumber;
+        try {
+             userNumber = Double.valueOf(getString()) ;
+        } catch (Exception e) {
+           throw new NumberFormatException();
+        }
         return userNumber;
     }
 
